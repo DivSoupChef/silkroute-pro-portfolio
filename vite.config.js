@@ -13,7 +13,7 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
-  base: '/silkroute-pro/',
+  base: '/silkroute-portfolio/',
   build: {
     outDir: 'docs',
   },
