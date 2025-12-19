@@ -1,0 +1,57 @@
+@import "./reset.css";
+@import "./variables/index.css";
+
+body {
+  background-color: var(--neutral-50);
+  font-family: var(--main-font);
+  color: var(--neutral-700);
+  overflow-x: hidden;
+}
+
+[class*="container"] {
+  padding: 0 15px;
+  max-width: 1210px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-110);
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1180px) {
+  h1 {
+    margin-bottom: 42px;
+  }
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-120);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-130);
+}
+
+p {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-160);
+  color: var(--neutral-500);
+}
+
+svg {
+  transition: all 0.3s ease;
+}
+
+button {
+  display: inline-block;
+  white-space: nowrap;
+  width: fit-content;
+}

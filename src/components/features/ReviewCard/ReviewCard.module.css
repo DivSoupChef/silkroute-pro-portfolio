@@ -1,0 +1,54 @@
+.head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+  img {
+    border-radius: 50%;
+    min-width: 150px;
+    max-width: 150px;
+  }
+  margin-bottom: 24px;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 469px) {
+  .head {
+    flex-direction: row;
+    text-align: left;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .author {
+    align-items: start;
+  }
+}
+
+.authorDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 469px) {
+  .description {
+    text-align: left;
+  }
+}

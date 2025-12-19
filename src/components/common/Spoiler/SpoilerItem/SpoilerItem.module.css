@@ -1,0 +1,57 @@
+.spoilerItem {
+  width: 100%;
+}
+
+.spoilerBtn {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  padding: 20px;
+  background-color: var(--white);
+  outline: 1px solid var(--neutral-200) !important;
+  transition: transform 0.3s ease;
+  width: 100%;
+  border-radius: 8px;
+
+  &.open svg {
+    transform: translate(0, -50%) rotate(135deg);
+  }
+}
+
+.title {
+  width: 100%;
+  padding-right: 44px;
+  position: relative;
+  white-space: wrap;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%) rotate(45deg);
+  }
+}
+
+.spoilerContentWrapper {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.spoilerContent {
+  opacity: 0;
+  padding-top: 20px;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  white-space: wrap;
+
+  &.open {
+    opacity: 1;
+    transform: translateY(0);
+    padding-top: 20px;
+  }
+}

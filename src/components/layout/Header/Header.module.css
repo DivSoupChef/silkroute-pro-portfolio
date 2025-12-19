@@ -1,0 +1,96 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLogo {
+  cursor: pointer;
+
+  & > svg {
+    min-width: 126px;
+    height: 22px;
+  }
+}
+
+@media (min-width: 428px) {
+  .headerLogo > svg {
+    min-width: 147px;
+    height: 26px;
+  }
+}
+
+@media (min-width: 791px) {
+  .headerLogo > svg {
+    min-width: 180px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .headerLogo > svg {
+    min-width: 210px;
+    height: 37px;
+  }
+}
+
+.mobileWrapp {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  & > * svg {
+    min-width: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.headerContacts {
+  display: none;
+}
+
+@media (min-width: 428px) {
+  .headerContacts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & > svg {
+      min-width: 20px;
+    }
+  }
+}
+
+.callBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--neutral-500);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-140);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--primary-700);
+  }
+}

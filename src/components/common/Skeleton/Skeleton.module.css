@@ -1,0 +1,95 @@
+.assortmentList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+.assortmentItem {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.assortmentImage {
+  border-radius: 6px;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    90deg,
+    var(--neutral-200) 25%,
+    var(--neutral-100) 50%,
+    var(--neutral-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  margin-bottom: 16px;
+}
+
+.assortmentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.assortmentTextContent {
+  & *.assortmentDescription:not(:last-child) {
+    margin-bottom: 6px;
+  }
+}
+
+.assortmentTitle {
+  width: 100%;
+  height: 28px;
+  margin-bottom: 12px;
+  background: linear-gradient(
+    90deg,
+    var(--neutral-200) 25%,
+    var(--neutral-100) 50%,
+    var(--neutral-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.assortmentDescription {
+  width: 100%;
+  height: 16px;
+  background: linear-gradient(
+    90deg,
+    var(--neutral-200) 25%,
+    var(--neutral-100) 50%,
+    var(--neutral-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.assortmentBtn {
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--neutral-200) 25%,
+    var(--neutral-100) 50%,
+    var(--neutral-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

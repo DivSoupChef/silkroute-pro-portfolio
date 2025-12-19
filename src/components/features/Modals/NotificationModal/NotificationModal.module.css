@@ -1,0 +1,29 @@
+.notificationModal {
+  position: relative;
+  padding: 50px;
+  text-align: center;
+}
+
+.closeModal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  & > svg {
+    min-width: 24px;
+    height: 24px;
+  }
+}
+
+.modalHead {
+  & > svg {
+    min-width: 48px;
+    height: 48px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 12px;
+  color: var(--success-500);
+}

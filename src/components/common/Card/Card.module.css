@@ -1,0 +1,188 @@
+/* ===== Базовые CSS переменные ===== */
+.card {
+  /* Переменные для кастомизации */
+  --card-border-radius: 8px;
+  --card-border-width: 1px;
+  --card-transition: all 0.3s cubic-bezier(0.4, 0, 0.3, 1);
+
+  /* Базовые стили */
+  position: relative;
+  border-radius: var(--card-border-radius);
+  background-color: var(--white);
+  transition: var(--card-transition);
+  overflow: hidden;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &.inactive {
+    opacity: 0.5;
+  }
+}
+
+/* ===== Варианты карточек ===== */
+.default {
+  background-color: var(--white);
+}
+
+.primary {
+  background-color: var(--primary-50);
+  border-color: var(--color-primary-200, #bfdbfe);
+  color: var(--color-primary-900, #1e3a8a);
+}
+
+/* ===== Размеры отступов ===== */
+.small {
+  padding: 12px;
+}
+
+.medium {
+  padding: 20px;
+}
+
+.large {
+  padding: 24px;
+}
+
+.xlarge {
+  padding: 30px;
+}
+
+/* ===== Выравнивание текста ===== */
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-justify {
+  text-align: justify;
+}
+
+/* ===== Модификаторы ===== */
+.bordered {
+  outline: var(--card-border-width) solid var(--neutral-200);
+}
+
+.shadow {
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1));
+}
+
+.interactive {
+  cursor: pointer;
+  user-select: none;
+
+  &:hover:not(.disabled) {
+    transform: translateY(-2px);
+  }
+
+  &:active:not(.disabled) {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary-500, #3b82f6);
+    outline-offset: 2px;
+  }
+}
+
+.hoverable {
+  &:hover:not(.disabled) {
+    box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1));
+  }
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: inherit;
+  }
+}
+
+/* ===== Анимации ===== */
+
+/* ===== Индикатор (точка) ===== */
+.dot {
+  position: relative;
+}
+
+.dotIndicator {
+  position: absolute;
+  top: var(--spacing-3, 12px);
+  right: var(--spacing-3, 12px);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary-500, #3b82f6);
+  animation: pulse 2s infinite;
+
+  .primary & {
+    background-color: var(--color-primary-500, #3b82f6);
+  }
+
+  .success & {
+    background-color: var(--color-green-500, #10b981);
+  }
+
+  .warning & {
+    background-color: var(--color-yellow-500, #f59e0b);
+  }
+
+  .error & {
+    background-color: var(--color-red-500, #ef4444);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .animated {
+    transition: var(--card-transition);
+
+    &:hover:not(.disabled) {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-xl);
+    }
+  }
+}
+
+/* ===== Утилитарные классы для обратной совместимости ===== */
+/* Если нужно поддерживать старый API */
+:global(.cardLeft) {
+  margin-right: auto;
+}
+
+:global(.cardRight) {
+  margin-left: auto;
+}

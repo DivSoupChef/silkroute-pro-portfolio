@@ -1,0 +1,92 @@
+.formWrapp {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 20px;
+  row-gap: 30px;
+  margin-bottom: 32px;
+}
+
+.fieldWrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: var(--neutral-50);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+
+  &::placeholder {
+    color: var(--neutral-400);
+  }
+
+  &:hover {
+    outline: 1px solid var(--neutral-200);
+  }
+
+  &:focus {
+    outline: 1px solid var(--primary-600);
+  }
+
+  &.error {
+    outline: 1px solid var(--danger-500);
+    background-color: var(--danger-50);
+  }
+
+  &.success {
+    outline: 1px solid var(--success-500);
+    background-color: var(--success-50);
+  }
+}
+
+.validMsg {
+  display: flex;
+  align-items: start;
+  gap: 6px;
+
+  & > svg {
+    min-width: 16px;
+  }
+
+  &.error {
+    color: var(--danger-500);
+  }
+
+  &.success {
+    color: var(--success-500);
+  }
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-130);
+}
+
+.btnWrapp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+
+  & > p {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-130);
+  }
+
+  & > button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btnWrapp {
+    flex-direction: row;
+
+    & > button {
+      width: fit-content;
+    }
+  }
+}

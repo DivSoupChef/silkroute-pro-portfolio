@@ -1,0 +1,98 @@
+.modalHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--neutral-200);
+
+  & > svg {
+    min-width: 24px;
+    height: 24px;
+  }
+}
+
+.galleryContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .galleryContent {
+    padding: 30px;
+  }
+}
+
+.mainImageWrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mainImage {
+  width: 100%;
+  min-height: 250px;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.btnNavigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.navBtn {
+  & > svg {
+    min-width: 24px;
+    height: 24px;
+  }
+}
+
+.thumbnailWrapp {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.thumbnailButton {
+  padding: 0;
+  outline: 2px solid transparent;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &.activeThumbnail {
+    outline: 2px solid var(--primary-600);
+  }
+}
+
+@media (min-width: 1025px) {
+  .thumbnailButton:hover {
+    transform: scale(1.05);
+  }
+}
+
+.thumbnail {
+  width: 100%;
+  min-width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.imageCounter {
+  text-align: center;
+  color: var(--neutral-500);
+  font-size: 14px;
+  flex-shrink: 0;
+}
