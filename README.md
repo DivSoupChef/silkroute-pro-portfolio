@@ -299,6 +299,6 @@ MIT License © 2025 DivSoupChef
 
 ## 🔗 Ссылки
 
-[![Figma Design](https://img.shields.io/badge/Figma&nbsp;Design-%23F24E1E.svg?style=flat-square&logo=figma&logoColor=white)](https://divsoupchef.github.io/silkroute-pro/)
+[![Figma Design](https://img.shields.io/badge/Figma&nbsp;Design-%23F24E1E.svg?style=flat-square&logo=figma&logoColor=white)](https://www.figma.com/design/HxcsdxpWmzrwoM5uJCokR6/SilkRoute-Pro?m=auto&t=z6Wan5NV5Wsggp9z-1)
 [![Демо](https://img.shields.io/badge/-@Демо-%23181717?style=flat-square&logo=github)](https://divsoupchef.github.io/silkroute-pro-portfolio/)
 [![GitHub Repository](https://img.shields.io/badge/-@GitHub&nbsp;Repository-%23181717?style=flat-square&logo=github)](https://github.com/DivSoupChef/silkroute-pro-portfolio)
